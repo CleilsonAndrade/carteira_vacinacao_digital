@@ -1,0 +1,81 @@
+{% extends 'vacinas/vacinas_cadastro/template_vacinas_cadastro.html' %}
+
+<!-- TÍTULO DA PÁGINA -->
+{% block title %}Cadastro Adultos{% endblock %}
+
+<!-- VACINAS -->
+{% block vacinas %}
+      <details>
+        <summary>
+          <label for="vacina1">Já tomou a vacina contra a dengue?</label>
+        </summary>
+        <p>A vacina Vacina da dengue aplicada em adultos, tem como função proteger contra o(a) dengue, doença essa que causa são dor de cabeça, dor no corpo, mal-estar, fraqueza, febre e reação de alergia no local de injeção, como vermelhidão, coceira e inchaço e dor.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina1" value="sim" {{ 'checked' if usuario['vacina1'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina1" value="nao" {{ 'checked' if usuario['vacina1'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina2">Já tomou a vacina a SCR?</label>
+        </summary>
+        <p>A vacina SCR aplicada em adultos, tem como função proteger contra a tríplice viral, doença essa que causa sarampo, caxumba e rubéola.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina2" value="sim" {{ 'checked' if usuario['vacina2'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina2" value="nao" {{ 'checked' if usuario['vacina2'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina3">Já tomou a vacina contra a HIV?</label>
+        </summary>
+        <p>A vacina HIV aplicada em adultos, tem como função proteger contra aids, doença essa que ataca o sistema imunológico, responsável por defender o organismo de doenças.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina3" value="sim" {{ 'checked' if usuario['vacina3'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina3" value="nao" {{ 'checked' if usuario['vacina3'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina4">Já tomou contra a DT (difteria e tétano, tipo adulto)?</label>
+        </summary>
+        <p>A vacina DT aplicada em adultos, tem como função proteger contra o(a) Difteria e tétano, doenças essas que podem matar, se não houver tratamento.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina4" value="sim" {{ 'checked' if usuario['vacina4'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina4" value="nao" {{ 'checked' if usuario['vacina4'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina5">Já tomou contra a H1N1?</label>
+        </summary>
+        <p>A vacina H1N1, aplicada em adultos, tem como função proteger contra a gripe H1N1, doença essa que é a variação de vírus da gripe responsável por causar a gripe suína.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina5" value="sim" {{ 'checked' if usuario['vacina5'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina5" value="nao" {{ 'checked' if usuario['vacina5'] == 'nao' }} required> Não</input>
+      </div>
+<!-- FIM-VACINAS -->
+{% endblock %}

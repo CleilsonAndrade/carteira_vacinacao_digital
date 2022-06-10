@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+<!-- ESTILO CSS -->
+{% block style %}
+<style>
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #notfound {
+    position: relative;
+    height: 100vh;
+    background-image: url("{{ url_for('static', filename= 'assets/images/bg_error.jpg') }}");
+    background-position: center;
+    background-size: 50%;
+  }
+
+  #notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .notfound {
+    max-width: 720px;
+    width: 100%;
+    line-height: 1.4;
+    padding: 0px 15px;
+    color: #fff;
+    background: rgba(41, 8, 8, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(2, 2, 7, 0.4);
+    padding: 2rem;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .notfound .notfound-404 {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .notfound .notfound-404 h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 240px;
+    font-weight: 900;
+    margin: 0px;
+    text-transform: uppercase;
+    background: url("{{ url_for('static', filename= 'assets/images/text.png') }}");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .notfound .notfound-404 img {
+    height: 20rem;
+  }
+
+  .notfound h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .notfound p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+  }
+
+  .notfound a {
+    font-family: 'Titillium Web', sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    background: #5c91fe;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-top: 15px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    opacity: 0.7.5;
+  }
+
+  .notfound a:hover {
+    background: #0b55eb;
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .notfound .notfound-404 {
+      height: 110px;
+      line-height: 110px;
+    }
+    .notfound .notfound-404 h1 {
+      font-size: 120px;
+    }
+
+    .notfound .notfound-404 img {
+      display: none;
+    }
+
+    .notfound a {
+      text-align: center;
+      width: 100%;
+    }
+  }
+</style>
+{% endblock %}
+
+<!-- TÍTULO DA PÁGINA -->
+{% block title %}Página não encontrada{% endblock %}
+
+<!-- BODY -->
+{% block body %}
+<div id="notfound">
+  <div class="notfound">
+    <div class="notfound-404">
+      <h1>404</h1>
+      <img
+        id="ze"
+        src="{{ url_for('static', filename= 'assets/images/ze_gotinha.png') }}"
+        alt="Imagem do Zé Gotinha"
+      />
+    </div>
+    <h2>Oops! Esta página não está disponível no momento...</h2>
+    <p>
+      Desculpe, mas a página que você está procurando não existe ou está
+      temporariamente indisponível
+    </p>
+    <a href="{{ (url_for('index')) }}">Acessar página inicial</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+<!-- ESTILO CSS -->
+{% block style %}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("{{ url_for('static', filename= 'assets/images/bg.jpg') }}");
+    height: 100vh;
+    background-size: cover;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  form.jumbotron {
+    margin: 0 auto;
+    background-color: rgba(233, 236, 239, 0.95);
+  }
+
+  #container-card {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.2s ease-in-out;
+    transform: scale(0.98, 0.98);
+  }
+
+  .card:hover {
+    background-color: rgba(233, 236, 239, 1);
+    box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.4);
+    transform: scale(1, 1);
+  }
+
+  .card-body {
+    transition: 0.4s;
+  }
+
+  .card-body:hover {
+    background-color: #4ea2e6;
+    color: #f4f4f4;
+  }
+
+  @media (max-width: 720px) {
+    #container-card {
+      display: none;
+    }
+  }
+</style>
+{% endblock %}

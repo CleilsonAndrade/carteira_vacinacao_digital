@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+<!-- ESTILO CSS -->
+{% block style %}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-image: url("{{ url_for('static', filename= 'assets/images/bg_vac.webp') }}");
+    background-repeat: repeat;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  form.jumbotron {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgba(233, 236, 239, 0.95);
+  }
+
+  details[open] summary ~ * {
+    background-color: #90caf9;
+    color: #f4f4f4;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    animation: sweep 0.5s ease-in-out;
+  }
+
+  @keyframes sweep {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+{% endblock %}
+
+<!-- BODY -->
+{% block body %}
+<nav
+  class="navbar navbar-light shadow"
+  style="background-color: rgba(227, 242, 253, 0.97)"
+>
+  <a class="navbar-brand w-100 text-center" href="{{ (url_for('index')) }}">
+    <img
+      src="{{ url_for('static', filename= 'assets/favicon/android-chrome-192x192.png') }}"
+      width="30"
+      height="30"
+      class="d-inline-block align-top"
+      alt="Imagem logo na nav bar"
+    />
+    Carteira de Vacinação Digital
+  </a>
+</nav>
+
+<main>
+  <!-- FORM -->
+  {% block form %}
+  <!-- FIM-FORM -->
+  {% endblock %}
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-info text-center text-white mt-4">
+  <div class="container p-2">
+    <section>
+      <h5 class="text-uppercase">Grupo</h5>
+      <ul
+        class="list-unstyled mb-0"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+        "
+      >
+        <li>
+          <a href="#!" class="text-white">Carlos</a>
+        </li>
+        <li>
+          <a href="#!" class="text-white">Claudevan</a>
+        </li>
+        <li>
+          <a href="#!" class="text-white">Diogenes</a>
+        </li>
+        <li>
+          <a href="#!" class="text-white">Fernando</a>
+        </li>
+        <li>
+          <a href="#!" class="text-white">Jonatas</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    Desenvolvido por:
+    <a class="text-white" href="https://github.com/CleilsonAndrade"
+      >Cleilson Andrade</a
+    >
+  </div>
+</footer>
+
+<!-- SCRIPT JS -->
+{% block script %}
+<script src="{{ url_for('static', filename= 'js/impressao.js') }}"></script>
+{% endblock %}
+<!-- FIM-BODY -->
+{% endblock %}

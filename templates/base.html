@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename= 'assets/favicon/apple-touch-icon.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename= 'assets/favicon/favicon-32x32.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename= 'assets/favicon/favicon-16x16.png') }}"
+    />
+    <link
+      rel="manifest"
+      href="{{ url_for('static', filename= 'assets/favicon/site.webmanifest') }}"
+    />
+    <link
+      rel="mask-icon"
+      href="{{ url_for('static', filename= 'assets/favicon/safari-pinned-tab.svg') }}"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}"
+    />
+
+    <!-- ESTILO CSS -->
+    {% block style %} {% endblock %}
+
+    <!-- FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&family=Titillium+Web:wght@700;900&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TÍTULO DA PÁGINA -->
+    <title>
+      {% block title %} {% endblock %} - Carteira de Vacinação Digital
+    </title>
+  </head>
+
+  <body>
+    <!-- BODY -->
+    {% block body %}
+    <!-- FIM-BODY -->
+    {% endblock %}
+
+    <!-- SCRIPT-JS -->
+    {% block script %} {% endblock %}
+  </body>
+</html>

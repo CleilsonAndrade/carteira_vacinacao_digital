@@ -1,0 +1,57 @@
+{% extends 'autenticacao/template.html' %}
+
+<!-- TÍTULO DA PÁGINA -->
+{% block title %}Acesso a conta{% endblock %}
+
+<!-- BODY -->
+{% block body %}
+
+<!-- ALERTA DE VACINAS ATUALIZADAS -->
+{% for message in get_flashed_messages() %}
+<!-- MENSAGENS A SEREM EXIBIDAS -->
+<div id="close" class="alert alert-success text-center shadow-sm">
+  <strong>{{ message }}</strong>
+</div>
+{% endfor %}
+
+<main>
+  <div class="row">
+    <div class="text-center">
+      <img
+        style="height: 150px; margin-bottom: 8px; padding-top: 10%"
+        src="{{ url_for('static', filename= 'assets/images/logo.png') }}"
+        alt="Imagem logo"
+      />
+    </div>
+    <form method="post" class="jumbotron shadow pt-4 pb-4">
+      <h1>Login</h1>
+      <hr />
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="usuario"
+          placeholder="Digite seu nome"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">Entrar</button>
+        </div>
+      </div>
+      <a href="{{ (url_for('index')) }}">Registrar-se</a>
+    </form>
+  </div>
+
+  <!-- CARDS -->
+  <div id="container-card" class="cards"></div>
+</main>
+
+<!-- SCRIPT-JS -->
+{% block script %}
+<script src="{{ url_for('static', filename= 'js/alerta_vacinas_atualizadas.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/axios.min.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/api.js') }}"></script>
+
+{% endblock %}
+
+<!-- FIM-BODY -->
+{% endblock %}

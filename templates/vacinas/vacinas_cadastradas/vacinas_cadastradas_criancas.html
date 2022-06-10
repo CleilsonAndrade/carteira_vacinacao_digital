@@ -1,0 +1,154 @@
+{% extends 'vacinas/vacinas_cadastradas/template_vacinas_cadastradas.html' %}
+
+<!-- TÍTULO DA PÁGINA -->
+{% block title %}Perfil Crianças{% endblock %}
+
+<!-- VACINAS -->
+{% block vacinas %}
+      <details>
+        <summary>
+          <label for="vacina1">Já tomou a vacina BCG?</label>
+        </summary>
+        <p>A vacina BCG, aplicada em crianças, tem como função proteger contra a tuberculose, doença essa que afeta o pulmão, ossos, rins e meninges (membranas que envolvem o cérebro).</p>
+      </details>
+      <div>
+        <input type="radio" name="vacina1" value="sim" {{ 'checked' if usuario['vacina1'] == 'sim' }} required> Sim</input>
+        <input type="radio" name="vacina1" value="nao" {{ 'checked' if usuario['vacina1'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina2">Já tomou a vacina contra a Hepatite A?</label>
+        </summary>
+        <p>A vacina Hepatite A, aplicada em crianças, tem como função proteger contra a Hepatite A, doença essa que afeta o fígado, podendo ser sintomática ou não, com leve risco de ocasionar insuficiência hepática aguda grave que pode ser fulminante.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina2" value="sim" {{ 'checked' if usuario['vacina2'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina2" value="nao" {{ 'checked' if usuario['vacina2'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina3">Já tomou a vacina Penta/DTP?</label>
+        </summary>
+        <p>A vacina pentavalente, aplicada em crianças, tem como função proteger contra a difteria, tétano e coqueluche.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina3" value="sim" {{ 'checked' if usuario['vacina3'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina3" value="nao" {{ 'checked' if usuario['vacina3'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina4">Já tomou contra a Pneumocócica 10-valente?</label>
+        </summary>
+        <p>A vacina VPC10, aplicada em crianças, tem como função proteger contra a pneumonia, essa doença se trata de uma inflamação no pulmão, existem diversos tipos de pneumonia, mas as principais são: bacteriana, viral, aspirativa, nosocomial.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina4" value="sim" {{ 'checked' if usuario['vacina4'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina4" value="nao" {{ 'checked' if usuario['vacina4'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina5">Já tomou contra a Febre Amarela?</label>
+        </summary>
+        <p>A vacina da Febre Amarela, aplicada em crianças, é uma doença transmitida por mosquitos, os casos graves podem causar doenças cardíacas, é uma doença.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina5" value="sim" {{ 'checked' if usuario['vacina5'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina5" value="nao" {{ 'checked' if usuario['vacina5'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina6">Já tomou contra a Tríplice Viral?</label>
+        </summary>
+        <p>A vacina Tríplice Viral, aplicada em crianças, tem como função proteger contra a rubéola, sarampo e caxumba.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina6" value="sim" {{ 'checked' if usuario['vacina6'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina6" value="nao" {{ 'checked' if usuario['vacina6'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina7">Já tomou contra a Poliomielite?</label>
+        </summary>
+        <p>A vacina da Poliomielite, aplicada em crianças, doença essa que se trata da paralisia dos músculos, sendo transmitida por água e alimentos.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina7" value="sim" {{ 'checked' if usuario['vacina7'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina7" value="nao" {{ 'checked' if usuario['vacina7'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina8">Já tomou para a Meningocócica C?</label>
+        </summary>
+        <p>A vacina Meningocócica C, aplicada em crianças, tem como função proteger contra a meningite, alguns dos sintomas incluem dor de cabeça, febre e torcicolo.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina8" value="sim" {{ 'checked' if usuario['vacina8'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina8" value="nao" {{ 'checked' if usuario['vacina8'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina9">Já tomou contra a Influenza?</label>
+        </summary>
+        <p>A vacina Meningocócica C, aplicada em crianças, tem como função proteger contra a meningite, alguns dos sintomas incluem dor de cabeça, febre e torcicolo.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina9" value="sim" {{ 'checked' if usuario['vacina9'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina9" value="nao" {{ 'checked' if usuario['vacina9'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina10">Já tomou contra a Rotavírus?</label>
+        </summary>
+        <p>A vacina Rotavírus, aplicada em crianças, tem como função proteger contra a doença diarreica, alguns dos sintomas incluem desidratação, febre e diarreia.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina10" value="sim" {{ 'checked' if usuario['vacina10'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina10" value="nao" {{ 'checked' if usuario['vacina10'] == 'nao' }} required> Não</input>
+      </div>
+<!-- FIM-VACINAS -->
+{% endblock %}

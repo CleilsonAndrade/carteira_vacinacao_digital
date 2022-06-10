@@ -1,0 +1,49 @@
+{% extends 'vacinas/template_vacinas.html' %}
+
+<!-- FORM -->
+{% block form %}
+<form
+  action="{{ url_for('update', usuario=usuario['usuario'],idade=usuario['idade'])}}"
+  method="post"
+  id="form"
+  class="jumbotron pt-4 pb-4"
+>
+  <div>
+    <h1>Nome: {{ usuario['usuario'] }}</h1>
+    <!-- VERIFICA A FAIXA ETÁRIA VINDO DO BANCO DE DADOS E SENDO 1 = 'Criança'; 2 = 'Adulto' E 3 = 'Idoso' -->
+    {% if usuario['idade'] == '1' %}
+    <p>Faixa etária: Criança</p>
+    {% elif usuario['idade'] == '2' %}
+    <p>Faixa etária: Adulto</p>
+    {% else %}
+    <p>Faixa etária: Idoso</p>
+    {% endif %}
+    <!-- VERIFICA O SEXO VINDO DO BANCO DE DADOS E SENDO 'M' = 'Masculino' E 'F' = 'Feminino'   -->
+    <p>Sexo: {{ 'Masculino' if usuario['sexo'] == 'M' else 'Feminino' }}</p>
+  </div>
+
+  <hr />
+
+  <!-- VACINAS -->
+  {% block vacinas %}
+  <!-- FIM-VACINAS -->
+  {% endblock %}
+
+  <hr />
+  <div id="container-print" class="d-flex justify-content-between">
+    <button
+      class="btn btn-warning shadow-sm"
+      type="submit"
+      onclick="alert('Deseja atualizar as vacinas?')"
+    >
+      Atualizar vacinas
+    </button>
+
+    <!-- BOTÃO PARA IMPRESSÃO DAS VACINAS CADASTRADAS NA ROTA DAS VACINAS CADASTRADAS -->
+    <button id="imprimir" class="btn btn-info shadow-sm" type="button">
+      Imprimir carteira
+    </button>
+  </div>
+</form>
+<!-- FIM-FORM -->
+{% endblock %}

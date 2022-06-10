@@ -1,0 +1,73 @@
+{% extends 'autenticacao/template.html' %}
+
+<!-- TÍTULO DA PÁGINA -->
+{% block title %}Registre-se{% endblock %}
+
+<!-- BODY -->
+{% block body %}
+
+<main>
+  <div class="row">
+    <div class="text-center">
+      <img
+        style="height: 200px; margin-bottom: 8px; padding-top: 10%"
+        src="{{ url_for('static', filename= 'assets/images/logo.png') }}"
+        alt="Imagem logo"
+      />
+    </div>
+
+    <form method="post" class="jumbotron shadow pt-4 pb-4">
+      <h1>Cadastro</h1>
+      <hr />
+
+      <label for="usuario">Usuário:</label>
+      <input
+        type="text"
+        class="form-control"
+        name="usuario"
+        placeholder="Digite seu nome"
+        required
+      />
+      <br />
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="email@exemplo.com.br"
+        required
+      />
+
+      <br />
+      <span>Sexo:</span>
+      <input
+        type="radio"
+        name="sexo"
+        value="M"
+        id="masculino"
+        checked
+        required
+      />
+      <label for="masculino">Masculino</label>
+
+      <input type="radio" name="sexo" value="F" id="feminino" required />
+      <label for="feminino">Feminino</label>
+
+      <p>Escolhas uma faixa etária:</p>
+      <div class="input-group">
+        <select class="custom-select" name="idade">
+          <option name="idade" value="1">0 meses aos 11 anos</option>
+          <option name="idade" value="2">20 anos aos 59 anos</option>
+          <option name="idade" value="3">Acima dos 60</option>
+        </select>
+        <div class="input-group-append mb-3">
+          <button class="btn btn-primary" type="submit">Cadastrar</button>
+        </div>
+      </div>
+      <a href="{{ (url_for('login')) }}">Já possui uma conta?</a>
+    </form>
+  </div>
+</main>
+
+<!-- FIM-BODY -->
+{% endblock %}

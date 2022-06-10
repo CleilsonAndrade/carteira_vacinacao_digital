@@ -1,0 +1,81 @@
+{% extends 'vacinas/vacinas_cadastro/template_vacinas_cadastro.html' %}
+
+<!-- TÍTULO DA PÁGINA -->
+{% block title %}Cadastro Idosos{% endblock %}
+
+<!-- VACINAS -->
+{% block vacinas %}
+      <details>
+        <summary>
+          <label for="vacina1">Já tomou a vacina contra a Herpes-Zóster?</label>
+        </summary>
+        <p>A vacina Herpes-Zóster, aplicada em idosos, tem como função proteger contra o(a) Cobreiro (nome popular), doença essa que causa reativação do vírus da varicela no organismo, causando uma erupção dolorosa.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina1" value="sim" {{ 'checked' if usuario['vacina1'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina1" value="nao" {{ 'checked' if usuario['vacina1'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina2">Já tomou a vacina contra as Pneumocócica (VPC13) e (VPP23)?</label>
+        </summary>
+        <p>A vacina Pneumocócica (VPC13) e (VPP23) aplicada em idosos, tem como função proteger contra o(a) contra 13 tipos da bactéria Streptococcus pneumoniae (VPC13) e Doenças causadas por 23 tipos de pneumococos (VPP23) doença essa que problemas pulmonares e meningite por exemplo.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina2" value="sim" {{ 'checked' if usuario['vacina2'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina2" value="nao" {{ 'checked' if usuario['vacina2'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina3">Já tomou a vacina contra as Meningocócicas conjugadas ACWY/C?</label>
+        </summary>
+        <p>A vacina Meningocócicas conjugadas ACWY/C aplicada em idosos, tem como função proteger contra o(a) Meningites e infecções generalizadas (doenças meningocócicas) causadas pela bactéria meningococo dos tipos A C, W e Y.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina3" value="sim" {{ 'checked' if usuario['vacina3'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina3" value="nao" {{ 'checked' if usuario['vacina3'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina4">Já tomou contra a Hepatite B?</label>
+        </summary>
+        <p>A vacina Hepatite B aplicada em idosos, tem como função proteger contra o(a) vírus da hepatite B, ou HBV, doença essa que provoca alterações no fígado e pode levar ao aparecimento de sinais e sintomas agudos, como febre, enjoos, vômitos e olhos e pele amarelados.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina4" value="sim" {{ 'checked' if usuario['vacina4'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina4" value="nao" {{ 'checked' if usuario['vacina4'] == 'nao' }} required> Não</input>
+      </div>
+
+      <hr />
+
+      <details>
+        <summary>
+          <label for="vacina5">Já tomou contra a Tríplice viral (caxumba, rubéola e sarampo)?</label>
+        </summary>
+        <p>A vacina Tríplice viral (caxumba, rubéola e sarampo) aplicada em idosos, tem como função proteger contra o sarampo, caxumba e rubéola, doenças essas que não tratadas podem matar.</p>
+      </details>
+      <div>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'sim' O INPUT É CHECADO -->
+        <input type="radio" name="vacina5" value="sim" {{ 'checked' if usuario['vacina5'] == 'sim' }} required> Sim</input>
+        <!-- SE A VARIÁVEL USUÁRIO NO ÍNDICE CORRESPONDENTE A VACINA TIVER O VALOR 'nao' O INPUT É CHECADO -->
+        <input type="radio" name="vacina5" value="nao" {{ 'checked' if usuario['vacina5'] == 'nao' }} required> Não</input>
+      </div>
+<!-- FIM-VACINAS -->
+{% endblock %}
