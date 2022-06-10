@@ -66,7 +66,8 @@ Python (<a href="https://www.python.org/">_https://www.python.org/_</a>)
 
 ```bash
   # Instalar o pacote:
-  $ pip install pipreqs:
+  $ pip install pipreqs
+
   # Clone este repositório:
   $ git clone https://github.com/CleilsonAndrade/carteira_vacinacao.git
   $ python3 -m venv virtual
