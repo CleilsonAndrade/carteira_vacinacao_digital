@@ -7,7 +7,7 @@
 ## Índice
 
 - [Descrição](#descrição)
-- [Requisitos Funcionais](##Requisitos-Funcionais)
+- [Requisitos Funcionais](#requisitos-funcionais)
 - [Features](#features)
 - [Tecnologias](#tecnologias)
 - [Instalação](#instalação)
