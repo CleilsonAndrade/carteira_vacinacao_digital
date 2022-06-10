@@ -34,24 +34,24 @@ Aplicação com temática sobre saúde, tendo objetivo de transformar os dados d
 
 # Tecnologias:
 
-#### Front-End:
+### Front-End:
 
 - **HTML**
 - **CSS**
 - **JavaScript**
 
-### Frameworks e Libs:
+#### Frameworks e Libs:
 
 - **Jinja2 (Template Engine)**
 - **Bootstrap 4**
 - **Axios (Cliente HTTP)**
 
-#### Back-End:
+### Back-End:
 
 - **Python**
 - **SQL**
 
-### Frameworks e Libs:
+#### Frameworks e Libs:
 
 - **Flask (Micro-Framework de Servidor)**
 - **SQLite3 (Banco de Dados)**
