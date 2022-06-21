@@ -70,6 +70,16 @@ Python (<a href="https://www.python.org/">_https://www.python.org/_</a>)
 
   # Clone este repositório:
   $ git clone https://github.com/CleilsonAndrade/carteira_vacinacao.git
+
+  # Windows
+  $ python3 -m venv virtual
+  $ virtual\Scripts\activate
+  $ pip install flask && flask --version
+  $ python init_db.py
+  $ set FLASK_ENV=app && set FLASK_ENV=development
+  $ flask run
+
+  # Linux
   $ python3 -m venv virtual
   $ source virtual/bin/activate
   $ pip install -r requirements.txt
