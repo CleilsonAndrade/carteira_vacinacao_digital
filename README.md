@@ -6,15 +6,15 @@
 
 # 📒 Índice
 
-- [Descrição](#descrição)
-- [Requisitos Funcionais](#requisitos)
+* [Descrição](#descrição)
+* [Requisitos Funcionais](#requisitos)
   * [Features](#features)
-- [Tecnologias](#tecnologias)
+* [Tecnologias](#tecnologias)
 * [Design](#design)
   * [Cores](#cores)
   * [Fontes](#fontes)
-- [Instalação](#instalação)
-- [Licença](#licença)
+* [Instalação](#instalação)
+* [Licença](#licença)
 
 # 📃 <span id="descrição">Descrição</span>
 Aplicação com temática sobre saúde, tendo objetivo de transformar os dados da carteira de vacinação convencional de papel, em um sistema digital para guardar informações do usuário e suas vacinas já tomadas, sendo seu desenvolvimento realizado durante o Projeto Integrador Ministrado pelo <a href="https://www.linkedin.com/in/carlos-henrique-duarte-felisbino-9b493526/">_Professor Carlos Henrique Duarte Felisbino_</a>
