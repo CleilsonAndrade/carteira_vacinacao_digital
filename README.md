@@ -7,7 +7,6 @@
 # 📒 Índice
 
 - [Descrição](#descrição)
-- [Requisitos Funcionais](#requisitos-funcionais)
 - [Requisitos Funcionais](#requisitos)
   * [Features](#features)
 - [Tecnologias](#tecnologias)
@@ -20,7 +19,7 @@
 # 📃 <span id="descrição">Descrição</span>
 Aplicação com temática sobre saúde, tendo objetivo de transformar os dados da carteira de vacinação convencional de papel, em um sistema digital para guardar informações do usuário e suas vacinas já tomadas, sendo seu desenvolvimento realizado durante o Projeto Integrador Ministrado pelo <a href="https://www.linkedin.com/in/carlos-henrique-duarte-felisbino-9b493526/">_Professor Carlos Henrique Duarte Felisbino_</a>
 
-## <span id="cores">Requisitos Funcionais</span>
+## 📌 <span id="requisitos">Requisitos Funcionais</span>
 - [x] Salva os dados do paciente<br>
 - [x] Mostra vacinas obrigatórias<br>
 - [x] Salva vacinas tomadas<br>
@@ -56,7 +55,7 @@ Aplicação com temática sobre saúde, tendo objetivo de transformar os dados d
   * #f4f4f4<br>
 
 - <span id="fontes">Fontes<br></span>
-  * Roboto sans-serif
+  * Roboto, sans-serif
 
 # 🚀 <span id="instalação">Instalação</span>
 ```bash
