@@ -24,13 +24,13 @@ Aplicação com temática sobre saúde, tendo objetivo de transformar os dados d
 - [x] Mostra vacinas já tomadas<br>
 - [x] Especifica quais vacinas faltam, se houver<br>
 
-## Features
+### Features
 - [x] Impressão do documento<br>
 - [x] Responsividade<br>
 - [x] Exibição de notícias<br>
 
 # 💻 <span id="tecnologias">Tecnologias</span>
-## Front-End:
+### Front-End:
 - **HTML**
 - **CSS**
 - **JavaScript**
