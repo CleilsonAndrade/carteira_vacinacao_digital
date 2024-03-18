@@ -19,7 +19,7 @@
 # 📃 <span id="descrição">Descrição</span>
 Aplicação com temática sobre saúde, tendo objetivo de transformar os dados da carteira de vacinação convencional de papel, em um sistema digital para guardar informações do usuário e suas vacinas já tomadas, sendo seu desenvolvimento realizado durante o Projeto Integrador Ministrado pelo <a href="https://www.linkedin.com/in/carlos-henrique-duarte-felisbino-9b493526/">_Professor Carlos Henrique Duarte Felisbino_</a>
 
-## 📌 <span id="requisitos">Requisitos Funcionais</span>
+# 📌 <span id="requisitos">Requisitos Funcionais</span>
 - [x] Salva os dados do paciente<br>
 - [x] Mostra vacinas obrigatórias<br>
 - [x] Salva vacinas tomadas<br>
@@ -27,7 +27,7 @@ Aplicação com temática sobre saúde, tendo objetivo de transformar os dados d
 - [x] Mostra vacinas já tomadas<br>
 - [x] Especifica quais vacinas faltam, se houver<br>
 
-### Features
+## Features
 - [x] Impressão do documento<br>
 - [x] Responsividade<br>
 - [x] Exibição de notícias<br>
