@@ -36,13 +36,12 @@ Aplicação com temática sobre saúde, tendo objetivo de transformar os dados d
 - **HTML**
 - **CSS**
 - **JavaScript**
-- **Jinja2 (Template Engine)**
-- **Bootstrap 4**
-- **Axios (Cliente HTTP)**
+- **Jinja2**
+- **Bootstrap**
+- **Axios**
 - **Python**
-- **Flask (Micro-Framework de Servidor)**
-- **SQL**
-- **SQLite3 (Banco de Dados)**
+- **Flask**
+- **SQLite3**
 
 # 🎨 <span id="design">Design</span>
 - O modelo final para versão desktop e mobile está disponível na pasta `./design`
