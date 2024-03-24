@@ -33,15 +33,12 @@ Aplicação com temática sobre saúde, tendo objetivo de transformar os dados d
 - [x] Exibição de notícias<br>
 
 # 💻 <span id="tecnologias">Tecnologias</span>
-### Front-End
 - **HTML**
 - **CSS**
 - **JavaScript**
 - **Jinja2 (Template Engine)**
 - **Bootstrap 4**
 - **Axios (Cliente HTTP)**
-
-### Back-End
 - **Python**
 - **Flask (Micro-Framework de Servidor)**
 - **SQL**
