@@ -64,22 +64,21 @@ Aplicação com temática sobre saúde, tendo objetivo de transformar os dados d
 
   # Clone este repositório:
   $ git clone https://github.com/CleilsonAndrade/carteira_vacinacao_digital.git
-
   $ cd ./carteira_vacinacao_digital
 
-  # Windows
+   # Criar ambiente virtual:
   $ python3 -m venv virtual
-  $ virtual\Scripts\activate
-  $ pip install flask && flask --version
-  $ python init_db.py
-  $ set FLASK_ENV=app && set FLASK_ENV=development
-  $ flask run
 
-  # Linux
-  $ python3 -m venv virtual
+  # Ativar ambiente
   $ source virtual/bin/activate
+
+  # Instalar dependências:
   $ pip install -r requirements.txt
+
+  # Iniciar banco de dados:
   $ python init_db.py
+
+  # Executar:
   $ export FLASK_ENV=app && export FLASK_ENV=development && flask run
 ```
 
